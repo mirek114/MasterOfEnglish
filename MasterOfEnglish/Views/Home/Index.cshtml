@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<section class="container ">
+    <h1>Witaj na naszej stronie!</h1>
+    <div class="row">
+        <div class="jumbotron col-sm-7">
+            Chcesz uczyć się angielskiego, ale masz już dość nudnej nauki z niewygodnego zeszytu? 
+        Poszukujesz miejsca gdzie mógłbyś gromadzić słówka, których chcesz się nauczyć?
+        Ta strona jest włąsnie dla Ciebie!
+        </div>
+
+        <img src="\images\grafika2.png" class="img-responsive col-sm-5">
+    </div>
+
+    <div class="row">
+        <img src="\images\grafika1.jpg" class="img-responsive col-sm-5">
+        <h3 class="col-sm-7">Co możemy zaoferować?</h3>
+        <p class="col-sm-7">
+            Ta strona umożliwia tworzenie własnych baz słówek, których chciałbyś się nauczyć. 
+        Możesz tu segregowac swoje słówka według dowolnych kategori i uczyć się ich w dowolnej kolejności.
+        Możesz uczyć się kojeno słów i zaznaczać te, które już znasz, aby nie tracic czasu na ponowne ich wyświetlanie podczas nauki.
+        Dodatkowo możesz tez sprawdzić swoja wiedze w trybie odpytywania. Koniec z zasłanianiem słowek w zeszycie przy pomocy karki 
+        lub szukaniem osoby, która sprawdzi Twoją wiedze! Od dziś możesz uczyć się sam w wygodny sposób!
+        </p>
+        <h4 class="col-sm-7">Nie zwklekaj! Zarejestruj sie już dziś!</h4>
+        <div class="col-sm-7">
+            @Html.ActionLink("Rejestracja", "Register", "User", null, new { @class = "btn btn-success" })
+            @Html.ActionLink("Zaloguj", "LogIn", "User", null, new { @class = "btn btn-info" })
+
+        </div>
+    </div>
+</section>
+

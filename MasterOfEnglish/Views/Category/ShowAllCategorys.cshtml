@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MasterOfEnglish.Models.Category>
+
+@{
+    ViewBag.Title = "ShowAllCategorys";
+}
+
+@using (Html.BeginForm("ShowAllCategorys", "Category", FormMethod.Get))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <hr />
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <span class="navbar-form navbar-right">
+                @Html.TextBox("searchCategory")
+                <input type="submit" value="Szukaj" class="btn btn-default" />
+            </span>
+        </div>
+    </nav>
+
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstOrDefault(c => c.Name != null).Name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Zmień nazwę", "Edit", new { id = item.CategoryId }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Usuń", "Delete", new { id = item.CategoryId }, new { @class = "btn btn-danger" })
+                @Html.ActionLink("Wyświetl wszystkie słowa z kategorii", "ShowAllWordsFromCategory", new { id = item.CategoryId }, new { @class = "btn btn-success" })
+            </td>
+        </tr>
+    }
+
+</table>

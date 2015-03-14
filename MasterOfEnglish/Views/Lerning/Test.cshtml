@@ -1,0 +1,87 @@
+﻿@model MasterOfEnglish.Models.TestViewModel
+
+@{
+    ViewBag.Title = "Test";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+ if (Model == null)
+    {
+    <h3>Gratulacje! Znasz już wszystkie słowa :)</h3>
+    }
+    else
+    {
+    <div class="container">
+        <div id="loginbox" style="margin-top: 50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel">
+                <div class="panel-heading" style="background-color: #2c2c2c; color: white">
+                    <div class="panel-title">Podaj tłumaczenie</div>
+                </div>
+
+                <div style="padding-top: 30px" class="panel-body">
+
+                    <div style="display: none" class="alert alert-danger col-sm-12"></div>
+
+                    <form class="form-horizontal" role="form">
+                        @Html.ValidationSummary(true)
+
+                        @Html.HiddenFor(model => model.word.UserId)
+                        @Html.HiddenFor(model => model.word.WordId)
+                        @Html.HiddenFor(model => model.word.Status)
+                        @Html.HiddenFor(model => model.word.CategoryId)
+
+
+                        @if (Model.languageOfWordsInTest == MasterOfEnglish.Controllers.LanguageOfWordsInTest.Mixed)
+                        {
+                            Random rnd = new Random();
+                            int rand = rnd.Next(0, 2);
+                            if (rand == 0)
+                            {
+                                Model.languageOfWordsInTest = MasterOfEnglish.Controllers.LanguageOfWordsInTest.English;
+                            }
+                            else
+                            {
+                                Model.languageOfWordsInTest = MasterOfEnglish.Controllers.LanguageOfWordsInTest.Polish;
+                            }
+                        }
+
+                        <div class="form-group">
+
+                            @if (Model.languageOfWordsInTest == MasterOfEnglish.Controllers.LanguageOfWordsInTest.Polish)
+                            {
+                                @Html.Label(Model.word.PolishWord, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9">
+                                    @Html.TextBoxFor(model => model.word.EnglishWord, new { @class = "form-control", Value = "" })
+                                    @Html.ValidationMessageFor(model => model.word.EnglishWord)
+                                    @Html.HiddenFor(model => model.word.PolishWord)
+                                </div>
+                            }
+                            else if (Model.languageOfWordsInTest == MasterOfEnglish.Controllers.LanguageOfWordsInTest.English)
+                            {
+                                
+                                @Html.Label(Model.word.EnglishWord, new { @class = "control-label col-md-3" })
+                                <div class="col-md-9">
+                                    @Html.TextBoxFor(model => model.word.PolishWord, new { Value = "" })
+                                    @Html.ValidationMessageFor(model => model.word.PolishWord)
+                                    @Html.HiddenFor(model => model.word.EnglishWord)
+                                </div>
+                            }
+
+                            <div class="col-md-offset-3 col-md-9">
+                                <input type="submit" value="Sprawdź" class="btn  btn-default" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    }
+
+}
+

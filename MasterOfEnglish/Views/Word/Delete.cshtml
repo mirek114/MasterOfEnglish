@@ -1,0 +1,64 @@
+﻿@model MasterOfEnglish.Models.Word
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+@using (Html.BeginForm("Delete", "Word", FormMethod.Post, Model.WordId))
+                            {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="container">
+        <div id="loginbox" style="margin-top: 50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel">
+                <div class="panel-heading" style="background-color: #2c2c2c; color: white">
+                    <div class="panel-title">Czy na pewno chcesz usunąć to słowo?</div>
+                </div>
+
+                <div style="padding-top: 30px" class="panel-body">
+
+                    <div style="display: none" class="alert alert-danger col-sm-12"></div>
+
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <dl class="dl-horizontal">
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.PolishWord)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.PolishWord)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.EnglishWord)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.EnglishWord)
+                                </dd>
+
+                                <dt>
+                                    @Html.DisplayNameFor(model => model.Status)
+                                </dt>
+
+                                <dd>
+                                    @Html.DisplayFor(model => model.Status)
+                                </dd>
+
+
+
+                                <dd class="form-actions col-sm-offset-2">
+                                    <input type="submit" value="Usuń" class="btn btn-danger " />
+                                </dd>
+                                
+                            </dl>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,81 @@
+﻿@model MasterOfEnglish.Models.WordsAndCategorysViewModel
+
+@{
+    ViewBag.Title = "ShowAllWords";
+}
+
+@using (Html.BeginForm("ShowAllWords", "Word", FormMethod.Get))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <hr/>
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            @Html.ActionLink("Ustaw wszystkie słowa jako nieznane", "SetAllWordsAsUnkown", "Word", null, new { @class = "navbar-text" })
+            @Html.ActionLink("Ustaw słowa z wybranych kategorii jako nieznane", "SetWordsFromCategorysAsUnkown", "Word", null, new { @class = "navbar-text" })
+            <span class="navbar-form navbar-right">
+                @Html.TextBox("searchTerm")
+                <input type="submit" value="Szukaj" class="btn btn-default" />
+            </span>
+        </div>
+    </nav>
+
+}
+<div class="table-responsive">
+    <table class="table table-hover">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.words.FirstOrDefault(w => w.WordId != null).PolishWord)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.words.FirstOrDefault(w => w.WordId != null).EnglishWord)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.words.FirstOrDefault(w => w.WordId != null).Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.words.FirstOrDefault(w => w.WordId != null).Category)
+            </th>
+            <th></th>
+        </tr>
+
+        @if (Model.words.Count() == 0)
+        {
+            <tr>
+                <td colspan="4">Brak słów spełniających zadane kryteria
+                </td>
+            </tr>
+        }
+        else
+        {
+            foreach (var item in Model.words)
+            {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PolishWord)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EnglishWord)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem.categorys.FirstOrDefault(c => c.CategoryId == item.CategoryId).Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edytuj", "Edit", new { id = item.WordId }, new { @class = "btn btn-info" })
+                    @Html.ActionLink("Usuń", "Delete", new { id = item.WordId }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+            }
+        }
+    </table>
+</div>
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

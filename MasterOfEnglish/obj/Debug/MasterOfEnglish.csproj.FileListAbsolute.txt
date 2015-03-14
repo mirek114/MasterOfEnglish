@@ -1,0 +1,46 @@
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\MasterOfEnglish.dll
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\MasterOfEnglish.pdb
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\Microsoft.Web.Infrastructure.dll
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Helpers.dll
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Razor.dll
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Webpages.Deployment.dll
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Webpages.dll
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Webpages.Razor.dll
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Razor.xml
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Webpages.xml
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Webpages.Deployment.xml
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Webpages.Razor.xml
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Helpers.xml
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\obj\Debug\MasterOfEnglish.dll
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\obj\Debug\MasterOfEnglish.pdb
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\EntityFramework.dll
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\EntityFramework.SqlServer.dll
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\EntityFramework.xml
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\EntityFramework.SqlServer.xml
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\SimpleCrypto.dll
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Mvc.dll
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Mvc.xml
+C:\projekt c#\MasterOfEnglish\MasterOfEnglish\obj\Debug\MasterOfEnglish.csprojResolveAssemblyReference.cache
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\MasterOfEnglish.dll
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\MasterOfEnglish.pdb
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\EntityFramework.dll
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\EntityFramework.SqlServer.dll
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\Microsoft.Web.Infrastructure.dll
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\SimpleCrypto.dll
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Helpers.dll
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Mvc.dll
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Razor.dll
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\System.Web.WebPages.Deployment.dll
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\System.Web.WebPages.dll
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\System.Web.WebPages.Razor.dll
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\EntityFramework.xml
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\EntityFramework.SqlServer.xml
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Helpers.xml
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Mvc.xml
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\System.Web.Razor.xml
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\System.Web.WebPages.xml
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\System.Web.WebPages.Deployment.xml
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\bin\System.Web.WebPages.Razor.xml
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\obj\Debug\MasterOfEnglish.csprojResolveAssemblyReference.cache
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\obj\Debug\MasterOfEnglish.dll
+C:\Studia\semestr 5\c# wykłady\MasterOfEnglish\MasterOfEnglish\obj\Debug\MasterOfEnglish.pdb

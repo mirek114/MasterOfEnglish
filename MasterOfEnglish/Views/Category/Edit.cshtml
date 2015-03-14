@@ -1,0 +1,48 @@
+﻿@model MasterOfEnglish.Models.Category
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    @Html.ValidationSummary(true)
+
+    <div class="container">
+        <div id="loginbox" style="margin-top: 50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel">
+                <div class="panel-heading" style="background-color: #2c2c2c; color: white">
+                    <div class="panel-title">Wprowdzaź zmiany</div>
+                </div>
+
+                <div style="padding-top: 30px" class="panel-body">
+
+                    <div style="display: none" class="alert alert-danger col-sm-12"></div>
+
+                    <form class="form-horizontal" role="form">
+                        @Html.HiddenFor(model => model.UserId)
+                        @Html.HiddenFor(model => model.CategoryId)
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-4" })
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Name)
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-4 col-md-8">
+                                <input type="submit" value="Zapisz zmiany" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,54 @@
+﻿@model MasterOfEnglish.Models.User
+
+@{
+    ViewBag.Title = "Register";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true)
+
+    <div class="container">
+        <div id="loginbox" style="margin-top: 50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel">
+                <div class="panel-heading" style="background-color: #2c2c2c; color: white">
+                    <div class="panel-title">Rejestracja</div>
+                </div>
+
+                <div style="padding-top: 30px" class="panel-body">
+
+                    <div style="display: none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+                    <form id="loginform" class="form-horizontal" role="form">
+                        <table>
+                            <tr>
+                                <td>@Html.LabelFor(u => u.Email)</td>
+                                <td>@Html.TextBoxFor(u => u.Email, new { htmlAttributes = new { @class = "form-control" } })</td>
+                            </tr>
+                            <tr>
+                                <td>@Html.LabelFor(u => u.Password)</td>
+                                <td>@Html.PasswordFor(u => u.Password, new { htmlAttributes = new { @class = "form-control" } })</td>
+                            </tr>
+
+                            <tr>
+                                <td>@Html.Label("Powtórz hasło: ")</td>
+                                <td>@Html.PasswordFor(u => u.ConfirmPassword, new { htmlAttributes = new { @class = "form-control" } })</td>
+                            </tr>
+                        </table>
+                        <div style="margin-top: 10px" class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10 controls">
+                                <input type="submit" value="Zarejestruj" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+}

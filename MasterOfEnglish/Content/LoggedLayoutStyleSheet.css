@@ -1,0 +1,73 @@
+﻿.mainNavDiv {
+    background-color: lightslategrey;
+    font-family:Arial;
+    font-size: 18px;
+    color:white;
+    margin-top:0;
+    /*position: relative;*/
+    z-index:1000;
+}
+
+
+.mainNav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left:7%;    
+    position: relative;
+}
+
+.mainNav ul li {
+    display: inline-block;
+    padding:20px;
+}
+
+.mainNav ul li:hover {
+    background-color: darkblue;
+}
+
+
+.mainNav ul li:hover ul {
+    display:block;
+}
+
+.mainNav ul ul {
+    display:none;
+    position: absolute;
+    background-color:darkblue;
+    visibility: visible;
+    border: 5px solid lightslategrey;
+    border-top:0;
+    margin-left:-25px;
+    margin-top:20px;
+}
+
+.mainNav ul ul li {
+    display:block;
+}
+
+.mainNav ul li .navActionLink,visited {
+    display:block;
+    padding:0;
+    text-decoration:none;
+}
+
+
+.mainNav ul ul li .navActionLink:hover {
+    color: white;
+}
+
+.logOutActionLink {
+    color:white;
+    display:block;
+    text-decoration:none;
+}
+
+.logOutActionLink,visited {
+    display:block;
+    text-decoration:none;
+}
+
+.logOutActionLink:hover {
+    color: white;
+    text-decoration:none;
+}

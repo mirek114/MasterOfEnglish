@@ -1,0 +1,45 @@
+﻿@model MasterOfEnglish.Models.Category
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+@using (Html.BeginForm("Delete", "Category", FormMethod.Post, Model.CategoryId))
+{
+    @Html.AntiForgeryToken()
+    <div class="container">
+        <div id="loginbox" style="margin-top: 50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="panel">
+                <div class="panel-heading" style="background-color: #2c2c2c; color: white">
+                    <div class="panel-title">Czy na pewno chcesz usunąć tą kategorie?</div>
+                </div>
+
+                <div style="padding-top: 30px" class="panel-body">
+
+                    <div style="display: none" class="alert alert-danger col-sm-12"></div>
+
+                    <form class="form-horizontal" role="form">
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Name)
+                            </dt>
+
+                            <dd>
+                                @Html.DisplayFor(model => model.Name)
+                            </dd>
+
+                        </dl>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-4 col-md-8">
+                                <input type="submit" value="Usuń" class="btn btn-danger" />
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
